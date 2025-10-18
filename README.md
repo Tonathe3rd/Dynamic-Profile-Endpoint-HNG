@@ -82,7 +82,7 @@ Your API is running successfully 🎉
 ## 🧭Deployment
  Railway / Render / AWS Lightsail
  
-See a sample of my deployment from Railway.app - 
+See a sample of my deployment from Railway.app - https://dynamic-profile-endpoint-hng-production.up.railway.app/me
 
 👨🏽‍💻 Author - Adeshola Adetona
 
