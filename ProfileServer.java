@@ -24,6 +24,12 @@ public class ProfileServer {
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
 
         server.createContext("/me", new ProfileHandler());
+        server.createContext("/", exchange -> {
+            String response = "Hellooo! Try adding '/me' to your url so as to generate your profile and a cat fact.";
+            exchange.sendResponseHeaders(200, response.getBytes().length);
+            exchange.getResponseBody().write(response.getBytes());
+            exchange.close();
+        });
         server.setExecutor(null);
 
         logger.info("🚀 Server started on http://localhost:" + port + "/me");
